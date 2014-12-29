@@ -74,8 +74,10 @@ module.exports = function(url, data, cb) {
 
 },{"hyperquest":52}],3:[function(require,module,exports){
 var hg = require('mercury');
-var h = require('mercury').h;
-var _ = require('underscore');
+
+// mercury core app
+//
+// channels, state, and rendering
 
 // define channels
 var channels = require('./channels');
@@ -99,7 +101,7 @@ var render = require('./render');
 
 hg.app(document.body, App(), render);
 
-},{"./channels":1,"./render":173,"mercury":75,"underscore":172}],4:[function(require,module,exports){
+},{"./channels":1,"./render":173,"mercury":75}],4:[function(require,module,exports){
 
 },{}],5:[function(require,module,exports){
 /*!

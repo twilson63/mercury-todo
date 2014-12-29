@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify index2.js -o bundle.js",
-    "build": "browserify index2.js -o bundle.js"
+    "watch": "watchify index.js -o bundle.js",
+    "build": "browserify index.js -o bundle.js"
   },
   "repository": {
     "type": "git",
