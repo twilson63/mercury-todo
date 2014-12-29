@@ -6,16 +6,14 @@ var _ = require('underscore');
 var app =  express();
 var db = nano('http://localhost:5984/todos');
 
-app.use(express.static(__dirname + '/')); 
+app.use(express.static(__dirname + '/'));
 app.use(bodyParser.json());
 
-app.post('/api/todos/add', function(req, res) {
+app.post('/api/todos', function(req, res) {
   var doc = req.body;
   doc.type = 'todo';
   db.insert(doc, function(err, body) {
-    if(err) {
-      return res.status(500).send(err);
-    }
+    if(err) { return res.status(500).send(err); }
     res.status(200).send(body);
   });
 });
